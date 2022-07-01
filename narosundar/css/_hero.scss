@@ -1,0 +1,80 @@
+#hero{
+    width: 100%;
+    position: relative;
+
+    .container{
+        width: 100%;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex-grow: 1;
+
+        .col-bg{
+            flex-basis: 50%;
+            background: $colorBlack;
+            height: 100vh;
+
+            .service-img{
+                margin-left: 12%;
+                position: absolute;
+                margin-top: 10%;
+               
+            }
+            .content{
+                // margin-left: 2%;
+                width: 350px;
+                margin-top: 10px;
+                h1{
+                    color: $colorFont;
+                    font-size: 3em;
+                    font-weight: 800;
+                    line-height: 1;
+                    margin-bottom: 20px;
+                }
+                h3{
+                    color: $colorFont;
+                    font-weight: 400;
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    margin-bottom: 25px;
+                }
+
+                .btn{
+                    padding: 20px 50px;
+                    font-size: 22px;
+                    border: none;
+                    background: $hoverColor;
+                    color: $colorFont;
+                    cursor: pointer;
+                    position: relative;
+                    z-index: 9999;
+
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        // background: rgba(228, 221, 221,0.5);
+                        background: $colorFont;
+                        transition: 0.5s all cubic-bezier(0.11, 0.76, 0.71, 0.34);
+                        z-index: -1;
+                        // transform: scaleX(0);
+                    }
+                    &:hover{
+                        color: #ccc;
+                    }
+                    &:hover::before{
+                        width: 100%;
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}

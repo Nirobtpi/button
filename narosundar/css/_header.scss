@@ -1,0 +1,68 @@
+#header{
+    width: 100%;
+    height: auto;
+    background: $colorBlack;
+    padding: 20px 0;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            display: block;
+            flex-basis: 30%;
+        }
+        ul{
+            display: flex;
+            flex-basis: 70%;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            li{
+                margin-right: 30px;
+                a{
+                    color: $colorFont;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    font-weight: 500;
+                    transition: 0.5s all ease;
+
+                    &:hover{
+                        color: $hoverColor;
+                    }
+                }
+
+            }
+            // .btn{
+            //     position: absolute;
+            //     margin-left: 55%;
+            //     background: red;
+            //     height: 80px;
+            //     width: 200px;
+            //     font-size: 22px;
+            //     cursor: pointer;
+            //     color: $colorFont;
+            //     font-weight: 300;
+            // }
+        }
+        .close{
+            display: block;
+            width: 90%;
+            
+            li{
+                a{
+                    margin-top: 200px;
+                }
+            }
+        }
+        .mobile-menu{
+            i{
+                color: $colorFont;
+                font-size: 35px;
+                display: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
